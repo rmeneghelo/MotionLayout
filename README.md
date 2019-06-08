@@ -1,5 +1,4 @@
 # Foco
-<h4 align="center">A simple test with Motion Layout.</h4>
 
 This code is a simple test to the Motion Layout and how we could apply it.
 
