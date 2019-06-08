@@ -1,10 +1,10 @@
 # Foco
 
-This code is a simple test to the Motion Layout and how we could apply it.
+This code is a simple test to the MotionLayout and how we could apply it.
 
 # Tech/framework used
 
-Here I used the MotionLayout from Google and the project *androidx.*. 
+Here I used the MotionLayout from Google, Kotlin and the project *androidx.*. 
 
 # Installation
 
