@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_main.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+            android:id="@+id/button"
+            android:background="@android:color/darker_gray"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            app:layout_constraintEnd_toEndOf="@+id/motionLayout"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="@+id/motionLayout"
+            app:layout_constraintBottom_toBottomOf="@+id/motionLayout"
+            app:layout_constraintTop_toTopOf="@+id/motionLayout"/>
+
+    <TextView
+            android:id="@+id/txtPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/motionLayout"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/finish_payment"
+            app:layout_constraintStart_toStartOf="@+id/motionLayout"
+            app:layout_constraintBottom_toBottomOf="@+id/motionLayout"
+            app:layout_constraintTop_toTopOf="@+id/motionLayout"/>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/motionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutDescription="@xml/scene_01"
+            tools:showPaths="true">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/image"
+                android:src="@drawable/ic_airplanemode_active_black_24dp"
+                app:altSrc="@drawable/ic_airplanemode_inactive_black_24dp"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
