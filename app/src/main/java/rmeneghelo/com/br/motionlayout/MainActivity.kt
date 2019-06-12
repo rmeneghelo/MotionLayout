@@ -11,7 +11,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    var isFinished: Boolean = false
+    private val motionSceneEndId: Int = 2131165266
+    private var isFinished = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
                 txtPay.alpha = 1 - p3
+
                 if(isFinished) {
                     motionLayout.setTransition(R.id.start, R.id.start)
                     image.setImageResource(R.drawable.ic_airplanemode_inactive_black_24dp)
@@ -41,7 +43,10 @@ class MainActivity : AppCompatActivity() {
 
             override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
                 motionLayout.transitionToStart()
-                isFinished = true
+
+                if(p1 == motionSceneEndId) {
+                    isFinished = true
+                }
             }
         })
     }
